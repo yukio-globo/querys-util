@@ -1,0 +1,8 @@
+TVA e TVF
+=",{""dataCompra"":"""&TODAY()&""",""dataExibicao"":"""&TODAY()&""",""canal"":""1"",""tipo"":""TVA"",""programa"":"""&F32&""",""formato"":"""&M32&""",""mercado"":"""&L32&""",""exibidora"":"""&L32&""",""versaoTabelaPreco"":1,""secundagem"":"&O32&",""tipoProduto"":""PLANO""}"
+
+
+
+Digital (coluna Y)
+
+=",{""idOrigem"": ""1"",""localDeEntrega"":"""&K30&""",""tipoProduto"":""PLANO"",""versaoTabelaPreco"":1,""dataExibicao"":"""&V30&""",""dataCompra"":"""&V30&""",""tipo"":""Digital"",""formato"":"""&P30&""",""unidadeMedida"":"""&S30&""",""secundagem"":0,""mercado"":""null"",""exibidora"":""null"",""canal"":""null"",""du_Fds"":"&M30&",""vertical"":"""&F30&"""}"
