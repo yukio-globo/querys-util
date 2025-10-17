@@ -1,0 +1,8 @@
+SELECT Id
+    , CatalogItem__r.Catalog_Display_Name_2__c
+    , CatalogItem__r.Breadcrumb__c
+    , SalesChannel__c
+    , OrderType__c
+FROM Fila_Ocupacao__c
+WHERE Status__c ='Aprovado'
+    AND CreatedDate >= 2025-08-01T10:00:00.000-03:00

@@ -1,0 +1,9 @@
+SELECT Id
+    , cat_NomeComercial__c
+    , cat_Sigla__c
+    , cat_Plataforma__c
+    , cat_Categoria__c
+FROM cat_Localidade__c
+WHERE cat_Plataforma__c ='Digital'
+    OR cat_Plataforma__c = 'TV Fechada'
+    OR cat_Plataforma__c ='Digital'
