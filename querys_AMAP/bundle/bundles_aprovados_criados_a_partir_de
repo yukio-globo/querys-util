@@ -3,9 +3,12 @@ SELECT Id
     , Bundle_Name__c
     , Status__c
     , CreatedBy.Name
-    , Table_Date__c
     , Vertical__c
     , Vertical_Secundaria__c
+    , Iniciativa_de_Cadastro__c
+    , Start_Date__c
+    , End_Date__c
+    , Table_Date__c
 FROM Bundle__c
 WHERE Status__c ='Approved'
     AND CreatedDate >= 2025-01-01T00:00:00.000-03:00
