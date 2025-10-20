@@ -1,0 +1,10 @@
+SELECT Id
+    , Name
+    , Bundle_Name__c
+    , Status__c
+    , CreatedBy.Name
+    , Table_Date__c
+    , Vertical__c
+    , Vertical_Secundaria__c, Origem_Produto__r.Name
+FROM Bundle__c
+WHERE Origem_Produto__r.Name IN ('Globo Impacto', 'Diária na TV', 'Combo TVA')
