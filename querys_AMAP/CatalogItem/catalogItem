@@ -1,0 +1,8 @@
+SELECT Id
+    , name
+    , Breadcrumb__c
+    , Catalog_Item_Level__c
+    , Catalog_Display_Name__c
+    , Catalog_Display_Name_2__c
+FROM Catalog_Item__c
+WHERE Name = 'CI-00346'

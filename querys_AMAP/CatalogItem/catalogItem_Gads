@@ -1,0 +1,13 @@
+SELECT Id
+    , name
+    , Breadcrumb__c
+    , Catalog_Item_Level__c
+    , Catalog_Display_Name__c
+    , Catalog_Display_Name_2__c
+    , Sanitized__c
+    , Package_Catalog__c
+FROM Catalog_Item__c
+WHERE Active__c =true
+    AND Canal_de_venda__c ='GloboAds'
+    AND Disponivel_a_venda_direta__c =true
+    AND Media_Types__c = 'Digital'
