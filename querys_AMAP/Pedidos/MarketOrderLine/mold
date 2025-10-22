@@ -1,0 +1,12 @@
+SELECT ID
+    , Name
+    , Market_Order_Line__r.Bundle_Name__c
+    , Market_Order_Line__r.status__c
+    , Market_Order_Line__r.Bundle__c
+    , Format__c , Format_Name__c
+FROM Market_Order_Line_Details__c
+WHERE Market_Order_Line__r.CreatedDate >= 2025-10-01T00:00:00.000-03:00 
+    AND Market_Order_Line__r.CreatedDate < 2025-10-31T23:59:59.000-03:00 
+    AND Tipo_de_Formato__c IN ('Patrocínio', 'Avulso')
+    AND FormatLookup__r.Media_Types__c = 'Digital' 
+    AND Market_Order_Line__r.status__c = 'Order Created'

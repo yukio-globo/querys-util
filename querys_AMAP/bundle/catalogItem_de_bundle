@@ -1,0 +1,9 @@
+SELECT Catalog_Item__r.Breadcrumb__c
+    , Catalog_Item__r.Catalog_Display_Name_2__c
+    , Catalog_Item__r.Package_Catalog__c
+    , Catalog_Item__r.Media_Types__c
+    , Bundle__r.Bundle_Name__c
+    , Bundle__r.Id
+    , Bundle__r.Iniciativa_de_Cadastro__c
+FROM PriceItem__c
+WHERE Bundle__c = 'a3488000004IG41AAG'
