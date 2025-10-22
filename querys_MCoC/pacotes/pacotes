@@ -4,6 +4,7 @@ SELECT Id
     , cat_ModeloComercializacao__r.Name
     , cat_Ano__c
     , cat_Temporada__c
+    ,cat_Complemento__c
     , cat_Cota__r.Name
     , cat_DtTabelaPreco__c
     , cat_Status__c
@@ -12,4 +13,9 @@ SELECT Id
     , CreatedDate
     , CreatedBy.Name
 FROM Product2
-WHERE Family = 'Pacote'
+WHERE Family = 'Pacote' 
+    -- AND cat_ModeloComercializacao__r.Name = 'Patrocínio'
+    -- AND cat_ModeloComercializacao__r.Name = 'Participação'
+    -- AND cat_ModeloComercializacao__r.Name = 'Top de 5'
+    -- AND cat_ModeloComercializacao__r.Name = 'Globo Impacto'
+    -- AND cat_ModeloComercializacao__r.Name = 'Combo'
