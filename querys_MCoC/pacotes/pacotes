@@ -1,0 +1,9 @@
+SELECT Id
+    , Name
+    , cat_ProdutoOrigem__r.Name
+    , cat_ModeloComercializacao__r.Name
+    , cat_Cota__r.Name
+    , cat_DtTabelaPreco__c
+    , cat_Status__c
+FROM Product2
+WHERE Family = 'Pacote'
