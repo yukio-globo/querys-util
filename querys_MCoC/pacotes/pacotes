@@ -2,8 +2,14 @@ SELECT Id
     , Name
     , cat_ProdutoOrigem__r.Name
     , cat_ModeloComercializacao__r.Name
+    , cat_Ano__c
+    , cat_Temporada__c
     , cat_Cota__r.Name
     , cat_DtTabelaPreco__c
     , cat_Status__c
+    , cat_FulfilmentStartDate__c
+    , cat_EndOfLifeDate__c
+    , CreatedDate
+    , CreatedBy.Name
 FROM Product2
 WHERE Family = 'Pacote'
