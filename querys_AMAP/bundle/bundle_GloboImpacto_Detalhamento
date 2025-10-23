@@ -2,31 +2,33 @@ SELECT Catalog_Item__r.Breadcrumb__c
     , Catalog_Item__r.Catalog_Display_Name_2__c
     , Catalog_Item__r.Package_Catalog__c
     , Catalog_Item__r.Media_Types__c
+    , Grupo__r.Name
+    , Grupo__r.Multiplicadores__c
+    , Grupo__r.Percentual__c
+    , Grupo__r.Id
     , Bundle__r.Bundle_Name__c
     , Bundle__r.Id
     , Bundle__r.Iniciativa_de_Cadastro__c
 FROM PriceItem__c
-WHERE Bundle__c IN ('a34Dw0000015CrXIAU',
-    'a343m00000DD2VOAA1',
-    'a343m00000EIEpeAAH',
-    'a343m00000EIErVAAX',
-    'a34880000038kbpAAA',
-    'a3488000003TLFRAA4',
-    'a3488000003TjXtAAK',
-    'a3488000003fgnxAAA',
-    'a3488000003xYrxAAE',
-    'a3488000003xYryAAE',
-    'a3488000003xYrzAAE',
-    'a3488000003xYs0AAE',
-    'a3488000003xYs1AAE',
-    'a34Dw000000ZxOWIA0',
-    'a34Dw000000ZxOXIA0',
-    'a34Dw000000ZxOYIA0',
-    'a34Dw000000ZxOZIA0',
-    'a34Dw000000ZxOaIAK',
-    'a34Dw000000ZxObIAK',
-    'a34Dw000000ZzZZIA0',
-    'a34Dw000000ZzZeIAK',
-    'a34Dw000000ZzZjIAK',
-    'a34Dw000000wCq6IAE'
-)
+WHERE
+    Bundle__c IN ('a34Hu000005rs9pIAA',
+        'a34Hu000005sO1bIAE',
+        'a343m00000DD2VOAA1',
+        'a343m00000EIEpeAAH',
+        'a343m00000EIErVAAX',
+        'a34Hu000005rMzmIAE',
+        'a34Hu000005s3wIIAQ',
+        'a34Hu000005s3wNIAQ',
+        'a34Hu000005s3wSIAQ',
+        'a34Hu000005s3wXIAQ',
+        'a34Hu000005s3wcIAA',
+        'a34Hu000005s3whIAA',
+        'a34Hu000005sHilIAE',
+        'a34Hu000005sHivIAE',
+        'a34Hu000005sHj0IAE',
+        'a34Hu000005sHj5IAE',
+        'a34Hu000005sHj6IAE',
+        'a34Hu000005sRh8IAE',
+        'a34Hu000005sRhDIAU',
+        'a34bL000000b2inQAA',
+        'a34bL000001gqUfQAI')
