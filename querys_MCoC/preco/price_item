@@ -1,0 +1,20 @@
+SELECT Id
+    , cat_CanalVertical__r.Name
+    , cat_ProgramaFaixaHoraria__r.Name
+    , cat_Produto__r.Name
+    , cat_Produto__r.cat_CodigoSiscom__c
+    , cat_Produto__r.cat_Codigo_Operative1__c
+    , cat_Plataforma__c
+    , cat_Praca__r.cat_Sigla__c
+    , cat_UnidadeMedida__c
+    , cat_Duracao__c
+    , cat_PrecoUnitario__c
+    , cat_ExibicaoDe__c
+    , cat_ExibicaoAte__c
+    , cat_DataVendaInicio__c
+    , cat_DataVendaFim__c
+    , cat_Status__c
+    , CreatedBy.Name
+    , CreatedDate
+FROM Price_Book_Entry_Detail__c
+WHERE id = 'a0Fbe000003DOMCEA4'

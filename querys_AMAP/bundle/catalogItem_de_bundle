@@ -7,4 +7,4 @@ SELECT Catalog_Item__r.Breadcrumb__c
     , Bundle__r.Iniciativa_de_Cadastro__c
 FROM PriceItem__c
 WHERE Bundle__c = 'a3488000004IG41AAG'
-    Bundle__r.Origem_Produto__r.Name  IN ('Big Brother')
+    AND Bundle__r.Origem_Produto__r.Name  IN ('Big Brother')

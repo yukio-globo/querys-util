@@ -1,0 +1,12 @@
+SELECT id
+    , cat_Plataforma__c
+    , cat_TipoLista__c
+    , cat_ExibicaoDe__c
+    , cat_ExibicaoAte__c
+    , ValidFrom
+    , ValidTo
+    , cat_Moeda__c
+    , cat_ArquivoJove__c
+    , Status__c
+FROM Pricebook2
+WHERE id = '01sbe0000013vkLAAQ'
