@@ -1,0 +1,12 @@
+SELECT id
+    , Grupo_de_Programas__c
+    , Nome_do_Programa__c
+    , Bundle__r.Id
+    , Bundle__r.Name
+    , Bundle__r.Bundle_Name__c
+    , Grupo_de_Programas__r.Name
+    , Grupo_de_Programas__r.Tipo_de_Lista__c
+    , Grupo_de_Programas__r.Percentual__c
+    , Grupo_de_Programas__r.Permitir_bebida_alcoolica__c
+FROM Program_List__c
+WHERE Bundle__r.Origem_Produto__r.Name  IN ('Globo Impacto', 'Diárias na TV', 'Combo TVA')

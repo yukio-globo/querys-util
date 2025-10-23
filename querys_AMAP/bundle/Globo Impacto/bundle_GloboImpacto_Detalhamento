@@ -1,0 +1,13 @@
+SELECT Catalog_Item__r.Breadcrumb__c
+    , Catalog_Item__r.Catalog_Display_Name_2__c
+    , Catalog_Item__r.Package_Catalog__c
+    , Catalog_Item__r.Media_Types__c
+    , Grupo__r.Name
+    , Grupo__r.Multiplicadores__c
+    , Grupo__r.Percentual__c
+    , Grupo__r.Id
+    , Bundle__r.Bundle_Name__c
+    , Bundle__r.Id
+    , Bundle__r.Iniciativa_de_Cadastro__c, Bundle__r.Origem_Produto__r.Name
+FROM PriceItem__c
+WHERE Bundle__r.Origem_Produto__r.Name  IN ('Globo Impacto', 'Diárias na TV', 'Combo TVA')
