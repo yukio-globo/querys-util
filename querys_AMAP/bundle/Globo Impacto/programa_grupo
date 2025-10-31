@@ -10,3 +10,5 @@ SELECT id
     , Grupo_de_Programas__r.Permitir_bebida_alcoolica__c
 FROM Program_List__c
 WHERE Bundle__r.Origem_Produto__r.Name  IN ('Globo Impacto', 'Diárias na TV', 'Combo TVA')
+
+Diária Regional
