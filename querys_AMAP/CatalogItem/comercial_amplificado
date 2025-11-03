@@ -1,0 +1,10 @@
+SELECT Id
+    , Catalog_Display_Name_2__c
+    , Sigla_Programa_Amplificado__c
+    , Breadcrumb__c
+    , Duracao_Padrao__c
+FROM Catalog_Item__c
+WHERE Amplificado__c =true
+    AND Disponivel_a_venda_direta__c =true
+    AND Active__c =true 
+    AND Canal_de_venda__c = 'GloboAds'
