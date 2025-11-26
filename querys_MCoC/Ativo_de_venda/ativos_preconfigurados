@@ -1,10 +1,10 @@
 SELECT Id
-    , Name
+    , Name , cat_Sigla__c
     , cat_Codigo_Operative1__c
     , cat_CodigoSiscom__c
     , cat_AtivoBase__c
-    , cat_CodigoProduto__c
 FROM Product2
 WHERE cat_Status__c ='Aprovado' 
     AND type != 'Bundle'
     AND RecordType.Name = 'Configuração'
+    AND cat_Status__c ='Aprovado'   
