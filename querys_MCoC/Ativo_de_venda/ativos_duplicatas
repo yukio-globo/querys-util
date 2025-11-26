@@ -1,6 +1,0 @@
-SELECT count(id)
-    , cat_CodigoSiscom__c
-FROM Product2
-WHERE RecordType.Name = 'Configuração'
-group by cat_CodigoSiscom__c
-having count (id) > 1

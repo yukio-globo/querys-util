@@ -1,0 +1,7 @@
+SELECT count(id)
+    , cat_CodigoSiscom__c
+FROM Product2
+WHERE RecordType.Name = 'Commercial'
+    AND cat_Status__c IN ('Aprovado','Em Precificação')
+GROUP BY cat_CodigoSiscom__c
+HAVING count (id) > 1

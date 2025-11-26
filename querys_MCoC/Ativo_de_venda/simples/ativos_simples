@@ -4,8 +4,9 @@ SELECT Id
     , cat_Codigo_Operative1__c
     , cat_CodigoSiscom__c
     , cat_AtivoBase__c
+    , cat_Status__c
 FROM Product2
 WHERE cat_Status__c ='Aprovado'
     AND type != 'Bundle'
     AND RecordType.Name = 'Commercial'
-    AND cat_Status__c ='Aprovado'   
+    AND cat_Status__c IN ('Aprovado','Em Precificação')
