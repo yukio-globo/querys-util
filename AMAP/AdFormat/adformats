@@ -1,8 +1,46 @@
+/*Ativos*/
+SELECT Id
+    , Name
+    , Tipo_de_Midia__c
+    , Format__c
+    , Commercial_Name__c
+    , Chave_Negocio_Free_To_Air__c
+    , Chave_Negocio_Digital__c
+FROM Ad_Format__c
+WHERE Status__c ='Active'
+
 /*Digital*/
-SELECT Id, Name, Format__c, Commercial_Name__c, Chave_Negocio_Free_To_Air__c, Chave_Negocio_Digital__c FROM Ad_Format__c WHERE Status__c ='Active' AND Tipo_de_Midia__c = 'Digital'
+SELECT Id
+    , Name
+    , Tipo_de_Midia__c
+    , Format__c
+    , Commercial_Name__c
+    , Chave_Negocio_Free_To_Air__c
+    , Chave_Negocio_Digital__c
+FROM Ad_Format__c
+WHERE Status__c ='Active'
+    AND Tipo_de_Midia__c = 'Digital'
 
 /*TVA*/
-SELECT Id, Name, Format__c, Commercial_Name__c, Chave_Negocio_Free_To_Air__c, Chave_Negocio_Digital__c FROM Ad_Format__c WHERE Status__c ='Active' AND Tipo_de_Midia__c = 'Free to Air'
+SELECT Id
+    , Name
+    , Tipo_de_Midia__c
+    , Format__c
+    , Commercial_Name__c
+    , Chave_Negocio_Free_To_Air__c
+    , Chave_Negocio_Digital__c
+FROM Ad_Format__c
+WHERE Status__c ='Active'
+    AND Tipo_de_Midia__c = 'Free to Air'
 
 /*TVF*/
-SELECT Id, Name, Format__c, Commercial_Name__c, Chave_Negocio_Free_To_Air__c, Chave_Negocio_Digital__c FROM Ad_Format__c WHERE Status__c ='Active' AND Tipo_de_Midia__c = 'Pay TV'
+SELECT Id
+    , Name
+    , Tipo_de_Midia__c
+    , Format__c
+    , Commercial_Name__c
+    , Chave_Negocio_Free_To_Air__c
+    , Chave_Negocio_Digital__c
+FROM Ad_Format__c
+WHERE Status__c ='Active'
+    AND Tipo_de_Midia__c = 'Pay TV'
