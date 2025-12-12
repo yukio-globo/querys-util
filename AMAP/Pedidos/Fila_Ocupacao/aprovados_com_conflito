@@ -1,0 +1,13 @@
+SELECT name
+    , Exhibition_Date__c
+    , CreatedDate
+    , CatalogItem__r.Catalog_Display_Name__c
+    , Advertiser_revenue__r.name
+    , Agency_revenue__r.name
+    , External_Order_Id__c
+    , Vertical__c
+    , SalesChannel__c
+    , CreatedBy.Name
+FROM Fila_Ocupacao__c
+where Status__c ='Aprovado'
+    and Exhibition_Date__c >= THIS_YEAR

@@ -1,0 +1,28 @@
+/*Query para extrair Ativos de Venda com Formatos e Atributos*/
+SELECT FIELDS(ALL),
+   (
+      SELECT Id, Name 
+      FROM ProductAttributeDefinitions
+   ),
+   (
+      SELECT AdSpaceSpecificationId
+      FROM AdSpaceSpecProducts
+   )
+FROM Product2
+LIMIT 200
+
+/*Querys para extrair os valores dos Atributos dos Ativos:
+Mapeia todos os valores possíveis de picklist por PicklistId*/
+ 
+SELECT Id, Name, PicklistId, Status
+FOM AttributePicklistValue
+WHERE PicklistId IN (SELECT PicklistId FROM AttributeDefinition) 
+AND Status = 'Active'
+ 
+-----------------------------------------------------------------------
+/*Mapeia exclusões de valores de picklist por AttributeDefinitionId*/
+ 
+SELECT AttributeId, AttributePicklistValueId
+FROM AttrPicklistExcludedValue
+WHERE AttributeId IN (SELECT Id FROM ProductAttributeDefinition WHERE
+Product2Id = 'id do Produto'
