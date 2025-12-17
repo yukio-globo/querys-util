@@ -1,0 +1,11 @@
+SELECT Id
+    , Name
+    , cat_Sigla__c
+    , cat_TipoRegistro__c
+    , cat_CanalVertical__r.Name
+    , cat_HorarioInicioExibicao__c
+    , cat_HorarioFimExibicao__c
+    , cat_EstimativaExibicaoSemanal__c
+    , cat_Plataforma__c
+    , cat_Jove__c
+FROM MediaContentTitle

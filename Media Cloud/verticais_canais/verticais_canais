@@ -1,0 +1,6 @@
+SELECT Id
+    , Name
+    , MediaType
+    , cat_TipoRegistro__c
+    , cat_ChaveUnica__c
+FROM MediaChannel
