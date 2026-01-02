@@ -3,7 +3,9 @@ SELECT Id
     , CatalogItem__r.Breadcrumb__c
     , SalesChannel__c
     , OrderType__c
+, ValorMO__c
 FROM Fila_Ocupacao__c
 WHERE Status__c ='Aprovado'
-    AND CreatedDate >= 2025-08-01T10:00:00.000-03:00
-    AND CreatedDate < 2025-08-31T23:59:59.000-03:00
+    AND CreatedDate >= 2025-01-01T10:00:00.000-03:00
+    AND CreatedDate < 2025-12-31T23:59:59.000-03:00
+AND SalesChannel__c ='Globo Ads' 

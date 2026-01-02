@@ -9,3 +9,13 @@ Welcome to LWC Communities!
  Chamada patrocinada
  comercial break
  vinheta abertura/encerramento
+
+
+SELECT id
+    , Name
+    , Bundle_Name__c
+    , Net_Price__c
+FROM Bundle__c 
+WHERE Status__c ='Approved' 
+    AND CreatedDate >= 2025-01-01T00:00:00.000-03:00 
+    AND CreatedDate <= 2025-12-31T23:59:59.999-03:00 

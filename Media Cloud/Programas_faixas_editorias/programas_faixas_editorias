@@ -8,4 +8,7 @@ SELECT Id
     , cat_EstimativaExibicaoSemanal__c
     , cat_Plataforma__c
     , cat_Jove__c
+    , cat_DtInicioExibicao__c
 FROM MediaContentTitle
+/*WHERE cat_TipoRegistro__c = 'Faixa Horária'
+    AND cat_HorarioInicioExibicao__c = null*/

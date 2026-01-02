@@ -7,5 +7,9 @@ SELECT Id
     , Vertical__c
     , Vertical_Secundaria__c
     , Origem_Produto__r.Name
+    , Net_Price__c
 FROM Bundle__c
 WHERE Origem_Produto__r.Name IN ('Globo Impacto', 'Diária na TV', 'Combo TVA')
+    AND Status__c != 'Canceled'
+    AND Net_Price__c != 0
+    AND Net_Price__c != null 

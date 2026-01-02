@@ -1,0 +1,15 @@
+SELECT Id
+    , Name
+    , vds_Produto_r_NomeCota__c
+    , QuoteNumber
+    , StartDate
+    , ExpirationDate
+    , TotalPrice
+    , CreatedDate
+    , CreatedBy.Name
+    , cat_Pacote__r.cat_ProdutoOrigem__r.Name
+    , cat_Pacote__r.cat_ModeloComercializacao__r.Name
+    , cat_Pacote__r.cat_Complemento__c
+    , cat_Pacote__r.Temporada__c
+FROM Quote
+WHERE cat_Pacote__r.cat_Status__c = 'Aprovado' 
