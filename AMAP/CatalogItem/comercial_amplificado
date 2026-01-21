@@ -6,3 +6,8 @@ SELECT Id
 FROM Catalog_Item__c
 WHERE Amplificado__c =true
     AND Disponivel_a_venda_direta__c =true
+
+
+
+
+

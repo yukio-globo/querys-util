@@ -1,0 +1,12 @@
+SELECT Catalog_Item__r.Breadcrumb__c
+    , Catalog_Item__r.Catalog_Display_Name_2__c
+    , Catalog_Item__c
+    , ChaveUnica__c
+    , Catalog_Item__r.Media_Types__c
+    , Bundle__r.Bundle_Name__c
+    , Bundle__r.Id
+    , Bundle__r.Iniciativa_de_Cadastro__c
+FROM PriceItem__c
+WHERE CreatedDate >= 2025-12-01T00:00:00.000-03:00 
+AND Bundle__r.Status__c = 'Approved'
+AND ChaveUnica__c = "ROT"
