@@ -12,3 +12,8 @@ SELECT Id
 FROM MediaContentTitle
 /*WHERE cat_TipoRegistro__c = 'Faixa Horária'
     AND cat_HorarioInicioExibicao__c = null*/
+
+
+
+/*todas as faixas entre 18 e 01*/
+SELECT (FIELDS ALL) FROM MediaContentTitle WHERE Name = '18h00 - 01h00' LIMIT 200

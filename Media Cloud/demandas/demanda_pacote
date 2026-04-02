@@ -1,0 +1,6 @@
+SELECT Id
+    , Member.name
+    , TeamRole.name
+FROM CaseTeamMember
+Where recordType = cat_DemandaComercial
+    AND TeamRole.name = 'PO Colaborador'

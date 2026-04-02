@@ -9,3 +9,7 @@ WHERE cat_Status__c ='Aprovado'
     AND type != 'Bundle'
     AND RecordType.Name = 'Configuração'
     AND cat_Status__c IN ('Aprovado','Em Precificação')
+
+
+
+    select count(id), RecordType.Name, Family from Product group by RecordType Name, Family
