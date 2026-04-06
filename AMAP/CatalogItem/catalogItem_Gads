@@ -1,4 +1,4 @@
-SELECT id, FROM Ad_Format__c SELECT Id
+SELECT id
     , name
     , Breadcrumb__c
     , Catalog_Item_Level__c
@@ -6,9 +6,9 @@ SELECT id, FROM Ad_Format__c SELECT Id
     , Catalog_Display_Name_2__c
     , Sanitized__c
     , Package_Catalog__c
-
+    , Amplificado__c
 FROM Catalog_Item__c
 WHERE Active__c =true
-    AND Canal_de_venda__c ='GloboAds;Dashboard disponibilidade de diária'
+    AND (Canal_de_venda__c ='GloboAds;Dashboard disponibilidade de diária' OR Canal_de_venda__c ='GloboAds')
     AND Disponivel_a_venda_direta__c =true
     AND Media_Types__c = 'Digital'

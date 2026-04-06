@@ -1,3 +1,9 @@
-SELECT Id, Product_Catalog__r.Id, Product_Catalog__r.Catalog_Display_Name_2__c, Product_Catalog__r.Breadcrumb__c,  Format_Composition__r.Nome_Comercial__c, Product_Catalog__r.Canal_de_venda__c 
+SELECT Id
+    , Product_Catalog__r.Id
+    , Product_Catalog__r.Catalog_Display_Name_2__c
+    , Product_Catalog__r.Breadcrumb__c
+    ,  Format_Composition__r.Nome_Comercial__c
+    , Product_Catalog__r.Canal_de_venda__c 
 FROM Catalog_Composition__c 
-WHERE Format_Composition__r.Nome_Comercial__c = 'StickyAd' and Product_Catalog__r.Active__c =true
+WHERE Format_Composition__r.Nome_Comercial__c = 'StickyAd'
+    AND Product_Catalog__r.Active__c =true
