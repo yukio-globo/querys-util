@@ -1,0 +1,18 @@
+SELECT Id
+    , Name
+    , stg_Sigla__c
+    , stg_Plataforma__c
+    , stg_Canal__c
+    , stg_TipoRegistro__c
+    , stg_IdExterno__c
+    , stg_DtInicioExibicao__c
+    , stg_HorarioInicioExibicao__c
+    , stg_Jove__c
+    , stg_Genero__c
+    , stg_EstimativaExibicaoSemanal__c
+    , stg_MensagemDaCritica__c
+FROM stg_Programacao__c
+WHERE CreatedDate >=2026-01-01T10:00:00.000-03:00
+    /*AND stg_TipoRegistro__c ='Mnemônico' */
+    /*AND stg_StatusDoProcessamento__c = 'Pendente' */
+    /*AND CreatedBy.Name = 'Paulo Bertucci'*/

@@ -9,7 +9,10 @@ SELECT Id
     , cat_Plataforma__c
     , cat_Jove__c
     , cat_DtInicioExibicao__c
+    , cat_Programa__c
 FROM MediaContentTitle
+/*Where cat_TipoRegistro__c = 'Mnemônico'*/
+/*Where cat_TipoRegistro__c = 'Programa'*/
 /*WHERE cat_TipoRegistro__c = 'Faixa Horária'
     AND cat_HorarioInicioExibicao__c = null*/
 

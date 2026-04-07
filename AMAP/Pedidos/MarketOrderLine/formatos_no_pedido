@@ -1,11 +1,12 @@
 select Format_Name__c
-, FormatLookup__r.Breadcrumb__c
-, FormatLookup__r.Catalog_Display_Name_2__c
-, FormatLookup__r.Media_Types__c
-, Market_Order_Line__r.BundleLookup__r.Bundle_Name__c
-, Market_Order_Line__r.BundleLookup__r.Iniciativa_de_Cadastro__c
+    , FormatLookup__r.Breadcrumb__c
+    , FormatLookup__r.Catalog_Display_Name_2__c
+    , FormatLookup__r.Media_Types__c
+    , Market_Order_Line__r.BundleLookup__r.Bundle_Name__c
+    , Market_Order_Line__r.BundleLookup__r.Iniciativa_de_Cadastro__c
 from Market_Order_Line_Details__c 
 where Market_Order_Line__r.market_order__r.opportunityId__r.StageName = 'Fechada Ganha' 
-and Market_Order_Line__r.market_order__r.AMAP_Primary_Order__c = true 
-and Market_Order_Line__r.Cota_consumida__c = true 
-and Market_Order_Line__r.CreatedDate >= 2025-01-01T00:00:00.000-03:00
+    and Market_Order_Line__r.market_order__r.AMAP_Primary_Order__c = true 
+    and Market_Order_Line__r.Cota_consumida__c = true 
+    and Market_Order_Line__r.CreatedDate >= 2025-03-01T00:00:00.000-03:00
+    and Market_Order_Line__r.CreatedDate < 2026-03-31T00:23:59.999-03:00
