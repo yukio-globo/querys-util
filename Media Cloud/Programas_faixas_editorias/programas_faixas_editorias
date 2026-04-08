@@ -11,12 +11,13 @@ SELECT Id
     , cat_DtInicioExibicao__c
     , cat_Programa__c
 FROM MediaContentTitle
-/*Where cat_TipoRegistro__c = 'Mnemônico'*/
-/*Where cat_TipoRegistro__c = 'Programa'*/
-/*WHERE cat_TipoRegistro__c = 'Faixa Horária'
-    AND cat_HorarioInicioExibicao__c = null*/
+WHERE cat_Ativo__c = true 
+    AND cat_TipoRegistro__c = 'Mnemônico'
+    /*AND cat_TipoRegistro__c = 'Mnemônico'*/
+    /*AND cat_TipoRegistro__c = 'Programa'*/
+    /*AND cat_TipoRegistro__c = 'Faixa Horária'*/
 
 
-
-/*todas as faixas entre 18 e 01*/
+/*todas as faixas entre 18 e 01
 SELECT (FIELDS ALL) FROM MediaContentTitle WHERE Name = '18h00 - 01h00' LIMIT 200
+*/
