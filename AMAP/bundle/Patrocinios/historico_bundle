@@ -1,0 +1,15 @@
+SELECT id
+    , ParentId
+    , Parent.Bundle_Name__c
+    , Field
+    , OldValue
+    , NewValue
+    , CreatedBy.Name
+    , CreatedDate
+    , Parent.CreatedDate
+    , Parent.Vertical__c
+    , Parent.Vertical_Secundaria__c
+FROM Bundle__History
+WHERE Parent.Status__c ='Approved'
+    AND parent.CreatedDate >= 2025-01-01T00:00:00.000-03:00 
+    AND ParentId = 'a3488000005Ft7pAAC'
