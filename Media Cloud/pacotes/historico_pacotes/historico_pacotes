@@ -1,16 +1,19 @@
 SELECT Id
     , Product2Id
     , Product2.Name
+    , Product2.cat_ProdutoOrigem__r.Name
+    , Product2.CreatedDate
+    , Product2.cat_VerticalPrincipal__c
+    , Product2.cat_VerticalSecundaria__c
+    , product2.cat_Cota__r.cat_TipoPeriodo__c
+    , Product2.cat_Cota__r.Name
+    , Product2.cat_Cota__r.cat_QtdeCotas__c
     , Field
     , OldValue
     , NewValue
     , CreatedBy.Name
     , CreatedDate
-    , Product2.CreatedDate
-    , Product2.cat_VerticalPrincipal__c
-    , Product2.cat_VerticalSecundaria__c
 FROM Product2History
 WHERE Product2.cat_Status__c = 'Aprovado' 
-    AND Field = 'cat_Status__c'
-    AND Product2.CreatedDate >= 2026-01-01T00:00:00.000-03:00
-    /*Product2Id = '01tbe00000A1SEg'*/
+    AND Product2.BasedOn.Name = 'Pacote'
+    AND Product2.CreatedDate >= 2025-01-01T00:00:00.000-03:00

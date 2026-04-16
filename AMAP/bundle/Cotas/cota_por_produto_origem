@@ -1,0 +1,11 @@
+SELECT id
+    , Bundle_Name__c
+    , Origem_Produto__r.Name
+    , CreatedBy.Name
+    , Cota__r.Name
+    , Cota__r.Quantidade_Original__c
+    , Cota__r.Quantidade_Atual__c
+    , Cota__r.Tipo_de_periodo__c
+FROM Bundle__c
+WHERE Status__c = 'Approved'
+    AND CreatedDate > 2025-04-01T00:00:00.000-03:00 

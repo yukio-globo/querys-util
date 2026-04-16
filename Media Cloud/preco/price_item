@@ -18,3 +18,21 @@ SELECT Id
     , CreatedDate
 FROM Price_Book_Entry_Detail__c
 WHERE id = 'a0Fbe000003DOMCEA4'
+
+Select id
+    , Name
+    , cat_CanalVertical__r.Name
+    , cat_ProgramaFaixaHoraria__r.Name
+    , cat_DataVendaInicio__c
+    , cat_DataVendaFim__c
+    , cat_ExibicaoDe__c
+    , cat_ExibicaoAte__c
+    , cat_PrecoUnitario__c
+    , cat_FormatoPreco__c
+    , cat_PriceBook__r.Name
+    , cat_pricebook__r.id
+    , cat_PriceBook__r.cat_TipoLista__c
+from Price_Book_Entry_Detail__c
+where cat_Status__c ='Ativo'
+    AND cat_FormatoPreco__c ='Faixa Horária'
+order by cat_PriceBook__r.id, cat_CanalVertical__r.Name 

@@ -12,3 +12,27 @@ WHERE Active__c =true
     AND (Canal_de_venda__c ='GloboAds;Dashboard disponibilidade de diária' OR Canal_de_venda__c ='GloboAds')
     AND Disponivel_a_venda_direta__c =true
     AND Media_Types__c = 'Digital'
+
+
+/*query original pro GloboAds*/
+SELECT CatalogItem__r.Code_Format__c
+    , Ad_format__r.Device__c
+    , Ad_Format__r.Chave_Negocio_Digital__c
+    , CatalogItem__c
+    , Ad_format__r.Commercial_Name__c
+    , CatalogItem__r.eligibility_week__c
+    , Ad_format__r.Composicao_formula__c
+    , Ad_format__r.Size__c, CatalogItem__r.Breadcrumb__c
+    , Ad_format__r.Observacoes__c
+    , Ad_format__r.Frequency__c
+    , CatalogItem__r.Catalog_Display_Name__c
+    , CatalogItem__r.Parent_Catalog_Item__r.Parent_Catalog_Item__r.Catalog_Display_Name__c
+    , Ad_Format__r.Position__c
+    , CatalogItem__r.Package_Catalog__c
+    , Ad_Format__c
+FROM Ad_Format_Spec__c
+WHERE CatalogItem__r.AMAP_Media_Type__c = 'Digital'
+    AND Ad_Format__r.Disponivel_a_venda_direta__c = true
+    AND Ad_Format__r.Status__c = 'Active'
+    AND CatalogItem__r.Canal_de_venda__c INCLUDES ('GloboAds')
+    AND CatalogItem__r.Active__c = true
