@@ -36,3 +36,17 @@ WHERE CatalogItem__r.AMAP_Media_Type__c = 'Digital'
     AND Ad_Format__r.Status__c = 'Active'
     AND CatalogItem__r.Canal_de_venda__c INCLUDES ('GloboAds')
     AND CatalogItem__r.Active__c = true
+
+/*Qualquer produto com preço sazonal definido*/
+SELECT Catalog_Item__r.Breadcrumb__c
+    , Catalog_Item__r.Catalog_Display_Name_2__c
+    , Catalog_Item__c
+    , ChaveUnica__c
+    , Price_List__c
+    , Unit__c
+    , Price_Per_Unit__c
+FROM PriceItem__c
+WHERE Catalog_Item__r.Canal_de_venda__c INCLUDES ('GloboAds')
+AND from_Date__c >= 2026-04-01
+AND To_Date__c <= 2026-04-30
+AND Price_List__r.Price_List_Type__c ='Sazonal' 

@@ -1,0 +1,17 @@
+SELECT Pricebook2Id
+    , Pricebook2.cat_Codigo__c
+    , Pricebook2.Name
+    , Pricebook2.cat_TipoLista__c
+    , Pricebook2.cat_Plataforma__c
+    , Pricebook2.CreatedBy.Name
+    , Pricebook2.ValidFrom
+    , Pricebook2.ValidTo
+    , Pricebook2.cat_ExibicaoDe__c
+    , Pricebook2.cat_ExibicaoAte__c
+    , Field
+    , OldValue
+    , NewValue
+    , CreatedDate
+FROM Pricebook2History
+WHERE Field = 'Status__c' 
+    AND Pricebook2.ValidFrom >= 2026-03-01T00:00:00.000-03:00 

@@ -1,0 +1,19 @@
+SELECT ParentId
+    , Parent.Name
+    , Parent.Custom_Name__c
+    , Parent.Price_List_Type__c
+    , parent.Free_to_Air__c
+    , parent.PayTV__c
+    , parent.Digital__c
+    , Parent.CreatedBy.Name
+    , Parent.from_Date__c
+    , Parent.To_Date__c
+    , parent.Sales_FromDate__c
+    , parent.Sales_ToDate__c
+    , Field
+    , OldValue
+    , NewValue
+    , CreatedDate
+FROM PriceList__History
+WHERE field = 'Status__c'
+    AND Parent.from_Date__c >= 2026-03-01 

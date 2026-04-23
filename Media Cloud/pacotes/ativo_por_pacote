@@ -6,6 +6,7 @@ SELECT Quote.cat_Pacote__r.Id
     , quote.cat_Pacote__r.cat_Cota__r.Name
     , quote.cat_Pacote__r.cat_Cota__r.cat_QtdeCotas__c
     , Product2.Name
+    , Product2.cat_Plataforma__c
     , Product2.cat_Sigla__c
     , Product2.cat_CodigoSiscom__c
     , Product2.cat_Codigo_Operative1__c
