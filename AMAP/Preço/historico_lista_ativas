@@ -10,10 +10,12 @@ SELECT ParentId
     , Parent.To_Date__c
     , parent.Sales_FromDate__c
     , parent.Sales_ToDate__c
+    , parent.Status__c
     , Field
     , OldValue
     , NewValue
     , CreatedDate
 FROM PriceList__History
 WHERE field = 'Status__c'
-    AND Parent.from_Date__c >= 2026-03-01 
+AND (Parent.Status__c = 'Ativo' OR Parent.Status__c = 'Histórico - Ativo')
+    AND Parent.from_Date__c >= 2026-03-01

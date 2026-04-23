@@ -8,10 +8,12 @@ SELECT Pricebook2Id
     , Pricebook2.ValidTo
     , Pricebook2.cat_ExibicaoDe__c
     , Pricebook2.cat_ExibicaoAte__c
+    , Pricebook2.Status__c
     , Field
     , OldValue
     , NewValue
     , CreatedDate
 FROM Pricebook2History
 WHERE Field = 'Status__c' 
+AND Pricebook2.Status__c = 'Ativo'
     AND Pricebook2.ValidFrom >= 2026-03-01T00:00:00.000-03:00 

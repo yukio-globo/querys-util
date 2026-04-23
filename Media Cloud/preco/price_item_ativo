@@ -1,0 +1,5 @@
+SELECT id
+    , cat_PriceBook__r.Id
+FROM Price_Book_Entry_Detail__c
+Where cat_Status__c ='Ativo'
+    AND cat_PriceBook__r.ValidFrom >= 2026-03-01T00:00:00.000-03:00 

@@ -1,0 +1,6 @@
+SELECT id
+    , Price_List__c
+FROM PriceItem__c
+WHERE Status__c =true
+    AND Price_List__r.Status__c = 'Ativo'
+    AND Price_List__r.from_Date__c >= 2026-03-01 
