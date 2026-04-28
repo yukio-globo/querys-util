@@ -13,3 +13,12 @@ WHERE cat_Status__c ='Aprovado'
 
 
     select count(id), RecordType.Name, Family from Product group by RecordType Name, Family
+
+
+SELECT Id
+    , DefaultValue
+    , Product2.cat_CodigoSiscom__c
+FROM ProductAttributeDefinition
+WHERE AttributeDefinition.Name = 'Possui Vazamento para Simulcast (AA)?' AND DefaultValue = 'True'
+    AND Product2.Recordtype.name = 'Configuração'
+ORDER BY Product2.cat_CodigoSiscom__c DESC
