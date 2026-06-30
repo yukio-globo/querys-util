@@ -6,14 +6,8 @@ SELECT Id
     , cat_Status__c
 FROM Product2
 WHERE cat_Status__c ='Aprovado' 
-    AND type != 'Bundle'
-    AND RecordType.Name = 'Configuração'
+    AND RecordType.Name IN ('Configuração')
     AND cat_Status__c IN ('Aprovado','Em Precificação')
-
-
-
-    select count(id), RecordType.Name, Family from Product group by RecordType Name, Family
-
 
 SELECT Id
     , DefaultValue
