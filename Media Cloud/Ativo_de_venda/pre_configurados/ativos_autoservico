@@ -5,6 +5,13 @@ SELECT Id
     , cat_Codigo_Operative1__c
     , Name
     , cat_Plataforma__c
+    , cat_Canal__r.Name
+    , cat_Canal__r.cat_ChaveUnica__c
+    , cat_ProgramaEditoria__r.Name
+    , cat_ProgramaEditoria__r.cat_Sigla__c
+    , cat_Localidade__r.name
+    , cat_Localidade__r.cat_Sigla__c
+    , cat_Disponivel_vendadireta__c
     , cat_Status__c
     , cat_CanaldeVendas__c
     , (
