@@ -1,0 +1,22 @@
+SELECT Id
+    , cat_AtivoBase__c
+    , cat_AtivoBase__r.Name
+    , cat_Sigla__c
+    , cat_Codigo_Operative1__c
+    , Name
+    , cat_Plataforma__c
+    , cat_Status__c
+    , cat_CanaldeVendas__c
+    , (
+      SELECT Id, Name 
+      FROM ProductAttributeDefinitions
+   )
+    , (
+      SELECT AdSpaceSpecificationId
+      FROM AdSpaceSpecProducts
+   )
+FROM Product2
+WHERE cat_Status__c ='Aprovado' 
+    AND RecordType.Name = 'Configuração'
+    AND cat_Status__c = 'Aprovado'
+AND cat_CanaldeVendas__c IN ('Afiliadas')
