@@ -27,3 +27,11 @@ WHERE cat_Status__c ='Aprovado'
     AND RecordType.Name = 'Configuração'
     AND cat_Status__c = 'Aprovado'
 AND cat_CanaldeVendas__c IN ('GloboAds')
+
+SELECT Id
+   , Name
+   , PicklistId
+   , Status
+FROM AttributePicklistValue
+WHERE PicklistId IN (SELECT PicklistId FROM AttributeDefinition) 
+   AND Status = 'Active'
