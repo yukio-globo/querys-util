@@ -1,0 +1,8 @@
+SELECT
+    QuoteLineItem.Quote.cat_Pacote__c
+    , quotelineitem.quote.cat_Pacote__r.Name
+FROM AdQuoteLine
+WHERE cat_CriadoImportacao__c = true
+    AND QuoteLineItem.Quote.cat_Pacote__c  != null
+GROUP BY QuoteLineItem.Quote.cat_Pacote__c, quotelineitem.quote.cat_Pacote__r.Name
+ORDER BY quotelineitem.quote.cat_Pacote__r.Name DESC

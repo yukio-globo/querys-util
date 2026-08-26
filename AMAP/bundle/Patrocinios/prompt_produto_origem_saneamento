@@ -1,0 +1,44 @@
+
+Vou te enviar um excel com um conjunto de informações na coluna Name de produtos de origem. 
+O conceito de produtos origem é um termo para identificar de maneira única o origem de um produto, e ele deve ser agóstico à datas, meses, cotas, etc. Ou seja, deve ser um termo enxuto que identifica o produto.
+Meu problema é que essa lista do excel possuí muitas derivações deste núcleo textual e devemos apenas marcar S para remover as derivações e manter apenas (sem geração de termos) para casos de derivações
+exemplo: Copa do Mundo deveria ser um produto origem, mas é comum achar Copa do Mundo, Copa do mundo 2025, copa do mundo cota campeão e outras derivações.
+Eu preciso que você marque essas derivações na coluna APAGAR? como S, de forma que sejam mantidos apenas os termos na coluna Name que representem o núcleo produto origem.
+Repare que o produto origem é um termo da empresa globo e habitualmente tem referencia à programas.
+
+Minha sugestão é que sejam executados os seguintes passos de analise, Marque S na coluna apagar? para:
+1- qualquer representação de Name sistêmica, como códigos alfanuméricos sem espaços maiores que 4 carcteres como 01tU600000IsGLZIA3 ou NBRA
+2- qualquer representação que varie apenas letras maiúsculas ou minúsculas, manter apenas a que possua a primeira letra maiúscula e marque S nas demais, se tivermos apenas "copa do mundo" e "COPA DO MUNDO"? marcar S no segundo caso, mantem apenas o caso totalmente minúsculo como correto, ou seja, sem S
+3- qualquer caso com critério ortográfico incorretos
+4- qualquer caso que varia com ou sem acentos, maneter apenas àquela que possua regras ortográficas corretas
+5- qualquer repressentação com variações de ano, temporada, mês ou "Cota" em seu nome, manter apenas os produtos origem sem essas informações, por exemplo Rock in Rio 2024 tem que marcar S, Rock in Rio sem S, e assim qualquer outro tipo de variação com ano deve ter S
+6- qualquer representação textual que só faça a variação de plural ou singular, mantenha apenas 1 sem S para casos no Singular
+7- qualquer caso como "Cinema Brasileiro" ou "Prêmio Platino de Cinema Ibero-Americano" que variam anos, ou numero de evento devem ser marcados com S, dado que não deveria existir um produto origem se repedindo por novas edições de eventos
+8- qualquer caso que aparente teste ou dado inválido como "Teste Priscila", "#NOME?", "[NÃO USAR
+9- se a planilha contiver apenas derivações, mas o termo raiz, marque todos com S na coluna apagar
+10- casos de variação regional como "Bom Dia São Paulo", "Bom Dia Rio" devem ser marcados com S, estecasos de variação de estado devem ter apenas 1 produto origem como: "Bom Dia Praça"
+11 - casos como "Futebol Série A" devem ser entendidos como um produto origem correto, mas casos como Futebol Séria A 2025 devem ser marcados com S
+12 - casos como "Novela das 9 - Top de 5 Segundos", "Jornal Nacional - Merchandising" devem ser marcados com S, dado que o correto seria: "Novela das 9" e "Jornal Nacional"
+13 - casos com Tela Quente 2 e "BBB 24", devem ser marcados com s, dado que seu produto origem deveria ser "tela quente" e "Big Brother"
+14 - casos como "Esporte Espetacular - Domingo", dado que deveria ser "Esporte Espetacular" seu produto origem, estes casos com traço são casos de duplicidades e devem ter S
+15- casos como "37º 10km Tribuna Fm" ou "9º Meia Maratona de Uberaba" devem ser removidos por conter numero de uma prova, no caso o 37 e 9, assim evita-se duplicações por outras temporadas
+16- casos com anos de aniverssário de eventos devem ser marcados como: "40 Anos do Axé", "71 ANOS DE UMUARAMA", "74 ANOS DE PARANAVAÍ", "80 anos ACP"
+17- casos de numero de eventos como "COP 29", "COP30 Nordeste", devemos marcar, pois o núcleo seria COP, ou cop nordeste
+18- casos como "NE1 PE1", "NE2 PE1" devem ser marcados, pois ilustram códigos técnicos NE seria de nordeste e PE1 é pernambuco estado
+19- casos como Auto Esporte × AutoEsporte são de fato semelhantes, nestes casos, mantenha aquele com separação entre palavras (o primeiro) e marque com S o segundo
+20- casos como Caldeirão × Caldeirão do Huck, também são semelhantes, neste caso, mantenha o caldeirão pois é núcleo textual. mais sucindo se comparado com o segundo
+21 - casos como Dia do Cuscuz × A Vida é Melhor com Cuscuz, são semelhantes textualmente, mas semanticamente são diferentes, mantenha ambos sem S
+22 - casos como Férias na Mirante × Férias da Mirante, Corrida Reizinho × Corrida do Reizinho são muito semelhantes, e indicam erro de uso de preposição no nome, nestes casos, marque S em todos
+23 - casos como Círio de Marabá × Círio de Nazaré, são semelhantes textualmente mas semanticamente são diferentes, mantenha ambos sem
+
+
+Considerações:
+- caso existam casos em que você tenha dúvida se são produtos origens iguais ou não, marque na coluna APAGAR? o nome do produto origem ao qual você ficou em duvida na referencia, assim eu posso refinar os critérios em uma nova tentativa
+- Quando nenhuma variação de um grupo obedece à ortografia correta e vc marco S para todas
+- nenhuma linha deverá desaparecer após análise, devemos só marcar a coluna APAGAR?
+- casos como programas "Sessão de Sábado", casos como "Domingão com Huck" ou "Tela Quente" apesar de variar o dia da semana no nome, devem ser mantidos sem S sendo assim considerados produtos origem corretos
+- casos de programas específicos devem ser mantidos, mas sem caso se repitam, manter apenas 1 sem S e os demais com S
+- casos como Akimatsuri, Black Friday, Bora lá, Cafezinho com Escobar ou Campanha de Dia das Mães TGS foram todos marcados, deveriam ser mantidos (sem S) e outros Names semelhantes marcados com S
+
+
+ao final, você deve me devolver uma versão atualizado do excel de origem com as marcações em S nos casos a serem removidos.
