@@ -1,0 +1,2 @@
+SELECT Id FROM Product2 WHERE BasedOn.Name = 'Ativo de Venda Digital'
+/*deve ser menor que 10000*/
