@@ -1,5 +1,24 @@
 SELECT id
     , cat_PriceBook__r.Id
+    , cat_PriceBook__r.Name
+    , cat_Modalidade__c
+    , cat_Modalidade__r.cat_Sigla__c
+    , cat_Modalidade__r.cat_Audiencia_Agregada__c
+    , cat_Plataforma__c
+    , cat_ProgramaFaixaHoraria__r.Name
+    , cat_ProgramaFaixaHoraria__r.cat_Sigla__c
+    , cat_DataVendaInicio__c
+    , cat_DataVendaFim__c
+    , cat_ExibicaoDe__c
+    , cat_ExibicaoAte__c
+    , cat_Status__c
+    , CreatedBy.Name
+    , CreatedDate
 FROM Price_Book_Entry_Detail__c
 Where cat_Status__c ='Ativo'
-    AND cat_PriceBook__r.ValidFrom >= 2026-03-01T00:00:00.000-03:00 
+    AND cat_ExibicaoDe__c >= 2026-08-01 
+    AND cat_ExibicaoAte__c <= 2026-11-30
+    AND cat_DataVendaInicio__c >= 2026-08-01
+    AND cat_DataVendaFim__c >= 2026-08-30
+ORDER by cat_ExibicaoAte__c DESC
+LIMIT 10

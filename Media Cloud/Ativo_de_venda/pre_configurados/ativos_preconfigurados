@@ -9,6 +9,8 @@ WHERE cat_Status__c ='Aprovado'
     AND RecordType.Name IN ('Configuração')
     AND cat_Status__c IN ('Aprovado','Em Precificação')
 
+select count(id), RecordType.Name, Family from Product group by RecordType Name, Family
+
 SELECT Id
     , DefaultValue
     , Product2.cat_CodigoSiscom__c

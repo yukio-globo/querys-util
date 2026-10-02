@@ -9,4 +9,6 @@ SELECT Catalog_Item__r.Breadcrumb__c
 FROM PriceItem__c
 WHERE Bundle__r.Status__c ='Approved' 
 AND Bundle__r.CreatedDate >= 2025-01-01T00:00:00.000-03:00 
+AND Catalog_Item__r.Media_Types__c = 'PayTV' 
+AND Bundle__r.Id = 'a34bL000001yP9RQAU' 
 LIMIT 1

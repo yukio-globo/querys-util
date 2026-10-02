@@ -1,0 +1,37 @@
+SELECT Id
+    , cat_AtivoBase__c
+    , cat_AtivoBase__r.Name
+    , cat_Sigla__c
+    , cat_Codigo_Operative1__c
+    , Name
+    , cat_Plataforma__c
+    , cat_Canal__r.Name
+    , cat_Canal__r.cat_ChaveUnica__c
+    , cat_ProgramaEditoria__r.Name
+    , cat_ProgramaEditoria__r.cat_Sigla__c
+    , cat_Localidade__r.name
+    , cat_Localidade__r.cat_Sigla__c
+    , cat_Disponivel_vendadireta__c
+    , cat_Status__c
+    , cat_CanaldeVendas__c
+    , (
+      SELECT Id, Name 
+      FROM ProductAttributeDefinitions
+   )
+    , (
+      SELECT AdSpaceSpecificationId
+      FROM AdSpaceSpecProducts
+   )
+FROM Product2
+WHERE cat_Status__c ='Aprovado' 
+    AND RecordType.Name = 'Configuração'
+    AND cat_Status__c = 'Aprovado'
+AND cat_CanaldeVendas__c IN ('Afiliadas')
+
+SELECT Id
+   , Name
+   , PicklistId
+   , Status
+FROM AttributePicklistValue
+WHERE PicklistId IN (SELECT PicklistId FROM AttributeDefinition) 
+   AND Status = 'Active'

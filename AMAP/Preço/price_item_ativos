@@ -1,6 +1,10 @@
 SELECT id
     , Price_List__c
+    , Price_List__r.Name
+    , Price_List__r.Price_List_Type__c
+    , Price_List__r.Free_to_Air__c
+    , Price_List__r.PayTV__c
+    , Price_List__r.Digital__c
 FROM PriceItem__c
-WHERE Status__c =true
-    AND Price_List__r.Status__c = 'Ativo'
-    AND Price_List__r.from_Date__c >= 2026-03-01 
+WHERE (Price_List__r.Status__c = 'Ativo' OR Price_List__r.Status__c = 'Histórico - Ativo')
+    AND Price_List__r.from_Date__c >= 2025-03-01 
