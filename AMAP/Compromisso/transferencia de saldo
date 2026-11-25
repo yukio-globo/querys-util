@@ -1,0 +1,9 @@
+/*query para investifar transf. de saldo com cruzamento de plataformas*/
+SELECT id
+    , CS_Destino__c
+    , CS_Destino__r.Linha_Negocio__c
+    , CS_Origem__c
+    , CS_Origem__r.Linha_Negocio__c
+FROM Transferencia_Saldo__c
+where Status__c ='Aprovado'
+    AND CreatedDate >= 2026-01-01T00:00:00.000-03:00

@@ -1,0 +1,24 @@
+SELECT Id
+    , Total_Negociado__c
+    , Total_Tabela__c
+    , PayTv_Total_Produtos_Negociados__c
+    , PayTv_Total_Produtos_Tabela__c
+    , Free_to_Air_Total_Produtos_Negociados__c
+    , Free_to_Air_Total_Produtos_Tabela__c
+    , Digital_Total_Produtos_Negociados__c
+    , Digital_Total_Produtos_Tabela__c
+    , ML_Digital_Total_Negociado__c
+    , ML_Digital_Total_Tabela__c
+    , ML_Free_to_Air_Total_Negociado__c
+    , ML_Free_to_Air_Total_Tabela__c
+    , ML_PayTv_Total_Negociado__c
+    , ML_PayTv_Total_Tabela__c
+    , ML_SC_Digital_Total_Negociado__c
+    , ML_SC_Digital_Total_Tabela__c
+    , ML_SC_Free_to_Air_Total_Negociado__c
+    , ML_SC_Free_to_Air_Total_Tabela__c
+    , Audiencia_Agregada_Negociado__c
+    , Audiencia_Agregada_Tabela__c
+    , Outros_Parceiros_Negociado__c
+    , Outros_Parceiros_Tabela__c
+FROM market_order__c  WHERE Name = 'MO-181485'

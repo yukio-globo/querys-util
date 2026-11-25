@@ -1,0 +1,9 @@
+SELECT id
+    , name
+    , Bundle__c
+    , Media_Type__c
+    , Value__c
+    , Tipo_de_Custo__c
+FROM Cost__c
+WHERE Bundle__r.Id = 'a34HZ00000Bb16rYAB'
+LIMIT 200

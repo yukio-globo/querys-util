@@ -1,0 +1,13 @@
+SELECT id
+    , Deal__r.Name
+    , Deal__c
+    , Forma_de_Pagamento__c
+    , Quantidade_de_Parcelas__c
+    , Start_Date__c
+    , End_Date__c
+    , CreatedBy.Name
+    , CreatedDate
+    , Valor_Tabela__c
+    ,Valor_Liquido_Negociado__c
+FROM Deal_Condition__c
+WHERE name = 'IC-012455'

@@ -1,0 +1,8 @@
+
+-Vínculos de emissão e utilização
+--SISCOM teste hoje - ajustes feitos quando muda para faturamento - juraci / rodrigo borges
+--OP1 - probleminha de infra de timeout na aplicação SF processa vinculos e retorna - alinhamento com devops TESTES SERÃO Hoje
+
+- visão segmentada - time tecnico pode subir o lado do SF sem impacto na esteira, entretanto, precisamos fazer um testes de validação cross
+
+- melhorias apontadas ontem estão no backlog, mas priorizamos itens de integração para agilizar testes cross times, assim que possível faremos e subiremos, mas entendemos que não é bloqueante não ter no primeiro momento
